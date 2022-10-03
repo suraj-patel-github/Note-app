@@ -4,6 +4,7 @@ const noteController = {
   //get all notes
   getNotes: async (req, res) => {
     try {
+      console.log(req.user)
       //res.json({id: req.user.id});
       const notes = await Notes.find({ user_id: req.user.id });
       res.json(notes);

@@ -52,9 +52,9 @@ const CreateNote = () => {
 					<textarea type='text' value={note.content} id="content"
 					name="content" required rows="10" onChange={onChangeInput}/>
 				</div>
-				<label htmlFor="date">Date: {note.date}</label>
+				<label htmlFor="date">Due Date: {note.date}</label>
 				<div className="row">
-					<input type='date' id="date"
+					<input type='date' id="date" min={new Date().toISOString().split('T')[0]}
 					name="date" onChange={onChangeInput}/>
 				</div>
 

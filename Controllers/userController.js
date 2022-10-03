@@ -39,6 +39,8 @@ const userController = {
         expiresIn: "1d",
       });
 
+  //      console.log(token);
+
       res.json({ token });
       // res.status(200).json({msg: "Login successful"})
     } catch (err) {

@@ -17,6 +17,9 @@ app.use(cors());
 //Routes
 app.use("/users", userRouter);
 app.use("/api/notes", noteRouter);
+app.use("",(req, res) => {
+  res.json({ message: "Server up and running!" });
+})
 
 // database connection
 const dbURI = process.env.MONGODB_URL;
